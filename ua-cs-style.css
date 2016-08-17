@@ -1,0 +1,803 @@
+/*
+Theme Name: UA Template - One Level Nav
+Theme URI: http://ua.edu
+Description: One level horizontal navigation web template based on the look and feel of the current UA Home Page. Available for usage by any official unit of The University of Alabama.
+Version: 1.0
+Author: Web Communications
+Author URI: http://webcomm.ua.edu
+Tags: university of alabama, crimson, white, grid, xhtml, multi-columns, primary horizontal navigation
+*/
+
+/*********************************************************
+	CSS Reset
+ *********************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*********************************************************
+	HTML Elements
+ *********************************************************/
+
+body {
+	font-family:"Lucida Sans",Lucida Sans Unicode,Verdana,sans-serif;
+	font-size:62.5%;
+	line-height:20px;
+	background:#fff url(http://cs.ua.edu/images/header-bg.png) top left repeat-x;
+}
+p {
+	font:normal 1.4em/155% Verdana,Geneva,sans-serif;
+	margin:0 0 15px 0;
+}
+p.big {
+	font-size:1.8em;
+	line-height:145%;
+	margin-bottom:18px;
+}
+p.smaller {
+	font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	font-family:"Lucida Sans",Lucida Sans Unicode,Verdana,sans-serif;
+	line-height:1.1em;
+	padding:6px 0 10px 0;
+}
+h1 {
+	font-size: 2.6em;
+	padding:5px 0 20px 0;
+}
+h2 {
+	font-size: 2.2em;
+}
+h3 {
+	font-size: 2.0em;
+}
+h4 {
+	font-size: 1.8em;
+}
+h5 {
+	font-size: 1.7em;
+}
+h6 {
+	font-size: 1.6em;
+}
+ul, ol {
+	font: 1.4em/175% Verdana,Geneva,sans-serif;
+	line-height:155%;
+	padding:5px 0 0 40px;
+	margin:0 0 15px 0;
+}
+table {
+	margin:0 0 15px 0;
+}
+table p {
+	font: 1.4em/175% Verdana,Geneva,sans-serif;
+	margin:0 0 5px 0;
+}
+a:link, a:visited, a:active {
+	color:#900;
+	text-decoration:none;
+}
+a:hover {
+	color:#900;
+	text-decoration:underline;
+}
+a {
+  outline: none;
+}
+
+ 
+/*********************************************************
+	Column width/positioning
+ *********************************************************/
+
+#wrapper, #footerwrapper {
+	width:1030px;
+	margin:0 auto;
+}
+
+#content {
+	padding-top:15px;
+	font-family:Verdana, sans-serif;
+	float:left;
+}
+
+/*********************************************************
+	Header
+ *********************************************************/
+
+#header {
+	height:153px;
+	position:relative;
+}
+#nameplate{
+	background:url(http://cs.ua.edu/images/ua-logo.png) top left no-repeat;
+	width:217px;
+	height:62px;
+	position:absolute;
+	top:28px;
+	right:10px;
+	text-indent:-9999px;
+	margin:0;
+}
+#nameplate-wide{
+	background:url(http://cs.ua.edu/images/ua-logo-wide.png) top left no-repeat;
+	width:254px;
+	height:27px;
+	position:absolute;
+	top:0px;
+	left:10px;
+	text-indent:-9999px;
+	margin:0;
+	z-index:100;
+}
+#wordmark{
+	background:url(http://cs.ua.edu/images/wordmark.png) top left no-repeat;
+	width:709px;
+	height:112px;
+	position:absolute;
+	top:0px;
+	left:10px;
+	text-indent:-9999px;
+	margin:0;
+}
+
+/*********************************************************
+	Main Navigation
+ *********************************************************/
+#main-nav{
+	position:absolute;
+	top:113px;
+	background-color:#333;
+	width:100%;
+}
+#main-nav ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+#main-nav ul li{
+	float:left;
+}
+
+/* Default item width for menu_5 is 194px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+ul.menu_5 li {width:194px;}
+.menu_5 li#item1 {width:194px;}
+.menu_5 li#item2 {width:194px;}
+.menu_5 li#item3 {width:194px;}
+.menu_5 li#item4 {width:194px;}
+.menu_5 li#item5 {width:194px;}
+
+/* Default item width for menu_6 is 162px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+ul.menu_6 li {width:162px;}
+.menu_6 li#item1 {width:105px;}
+.menu_6 li#item2 {width:175px;}
+.menu_6 li#item3 {width:182px;}
+.menu_6 li#item4 {width:202px;}
+.menu_6 li#item5 {width:150px;}
+.menu_6 li#item6 {width:158px;}
+
+/* Default item width for menu_7 is 138px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+ul.menu_7 li {width:138px;}
+.menu_7 li#item1 {width:138px;}
+.menu_7 li#item2 {width:138px;}
+.menu_7 li#item3 {width:138px;}
+.menu_7 li#item4 {width:138px;}
+.menu_7 li#item5 {width:138px;}
+.menu_7 li#item6 {width:138px;}
+.menu_7 li#item7 {width:138px;}
+
+/* Default item width for menu_8 is 121px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+ul.menu_8 li {width:121px;}
+.menu_8 li#item1{width:121px;}
+.menu_8 li#item2{width:121px;}
+.menu_8 li#item3{width:121px;}
+.menu_8 li#item4{width:121px;}
+.menu_8 li#item5{width:121px;}
+.menu_8 li#item6{width:121px;}
+.menu_8 li#item7{width:121px;}
+.menu_8 li#item8{width:121px;}
+
+/* Default item width for menu_9 is 108px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+ul.menu_9 li {width:108px;}
+.menu_9 li#item1 {width:108px;}
+.menu_9 li#item2 {width:108px;}
+.menu_9 li#item3 {width:108px;}
+.menu_9 li#item4 {width:108px;}
+.menu_9 li#item5 {width:108px;}
+.menu_9 li#item6 {width:108px;}
+.menu_9 li#item7 {width:108px;}
+.menu_9 li#item8 {width:108px;}
+.menu_9 li#item9 {width:108px;}
+
+/* Default item width for menu_10 is 97px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+ul.menu_10 li {width:97px;}
+.menu_10 li#item1 {width:97px;}
+.menu_10 li#item2 {width:97px;}
+.menu_10 li#item3 {width:97px;}
+.menu_10 li#item4 {width:97px;}
+.menu_10 li#item5 {width:97px;}
+.menu_10 li#item6 {width:97px;}
+.menu_10 li#item7 {width:97px;}
+.menu_10 li#item8 {width:97px;}
+.menu_10 li#item9 {width:97px;}
+.menu_10 li#item10 {width:97px;}
+
+#main-nav ul li a{
+	color:#fff;
+	background-color:#333;
+	text-decoration:none;
+	line-height:39px; 
+	display:block;
+	font-size:15px;
+	font-weight:bold;
+	height:39px;
+	overflow:hidden;
+}
+#main-nav ul li a:hover{
+	color:#990000;
+	background-color:#fff;
+	overflow:hidden;
+}
+
+/*********************************************************
+	Second-Level Navigation
+ *********************************************************/
+.sec-nav {
+	padding:0;
+	margin:0 0 30px 0;
+}
+ul.sec-nav {
+	font:bold 1.7em/175% "Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+}
+ul.sec-nav li {		
+	list-style:none;
+}
+ul.sec-nav li a {
+	width:95%;
+	display:block;
+	padding:5px 0 5px 5px; 	
+	border-top:1px #ccc dotted;
+	text-decoration:none;
+}
+ul.sec-nav li a.noborder {
+	border-top:0px;
+}
+ul.sec-nav li a:hover {
+	color:#fff;
+	background-color:#900;	
+	text-decoration:none;
+}
+
+/* Nested Second-Level Sub-Navigation */
+ul.sec-nav ul {
+	margin:0;
+	padding:0 0 10px 15px;
+	line-height:130%;
+	display:block;
+	width:92%;
+}
+ul.sec-nav ul li a {
+	font-size:13px;
+	font-weight:normal;
+	line-height:130%;
+	padding:4px 0 4px 4px;
+	border-top:0;
+	margin-top:0;
+}
+ul.sec-nav ul li a:hover {
+	margin-right:20px;
+}
+
+/* Thinner font for menu items to prevent wrapping */
+.thin {letter-spacing:-1px;}
+
+
+/*********************************************************
+	Search Box
+ *********************************************************/
+
+#toolbox{
+	font-family:"Lucida Sans",Lucida Sans Unicode,Arial,Verdana,sans-serif;
+	position:absolute;
+	top:32px;
+	right:5px;
+	background-color:#820c0c;
+	border:1px solid #993333;
+	width:215px;
+	height:50px;	
+}
+#toolbox form{
+	position:absolute;
+	top:10px;
+	left:10px;
+	background-color:#FFFFFF;
+	margin:0;
+	padding:0;
+}
+#toolbox form input{
+	border:0;
+	width:157px;
+	margin:2px;
+	padding:2px;
+	vertical-align:middle;
+	font-size:1.4em;
+	color:#333;
+}
+#toolbox form input#submit{
+	background:transparent url(http://cs.ua.edu/images/search.gif) 0 0 no-repeat;
+	cursor:pointer;
+	height:24px;
+	width:24px;
+	border:0;
+	font-size:0;
+    line-height:0;
+	text-indent:-9999px;
+}
+
+
+/*********************************************************
+        Columns
+ *********************************************************/
+.column_1,
+.column_2,
+.column_3,
+.column_4,
+.column_5,
+.column_6,
+.column_7,
+.column_8,
+.column_9 {
+	display:inline;
+	float: left;
+	margin:0 10px;
+}
+.column_1 {
+	width:88px;
+}
+.column_2 {
+	width:196px;
+}
+.column_3 {
+	width:304px;
+}
+.column_4 {
+	width:412px;
+}
+.column_5 {
+	width:520px;
+}
+.column_6 {
+	width:628px;
+}
+.column_7 {
+	width:736px;
+}
+.column_8 {
+	width:844px;
+}
+.column_9 {
+	width:952px;
+}
+.clear{
+	clear:both;
+	display:block;
+	height:0;
+	width:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+
+/*********************************************************
+        Columns - Prefix (empty space BEFORE columns)
+ *********************************************************/
+.prefix_1 {
+	padding-left:108px;
+}
+.prefix_2 {
+	padding-left:216px;
+}
+.prefix_3 {
+	padding-left:324px;
+}
+.prefix_4 {
+	padding-left:432px;
+}
+.prefix_5 {
+	padding-left:540px;
+}
+.prefix_6 {
+	padding-left:648px;
+}
+.prefix_7 {
+	padding-left:756px;
+}
+.prefix_8 {
+	padding-left:864px;
+}
+ 
+/*********************************************************
+        Columns - Suffix (empty space AFTER columns)
+ *********************************************************/
+.suffix_1 {
+	padding-right:108px;
+}
+.suffix_2 {
+	padding-right:216px;
+}
+.suffix_3 {
+	padding-right:324px;
+}
+.suffix_4 {
+	padding-right:432px;
+}
+.suffix_5 {
+	padding-right:540px;
+}
+.suffix_6 {
+	padding-right:648px;
+}
+.suffix_7 {
+	padding-right:756px;
+}
+.suffix_8 {
+	padding-right:864px;
+}
+
+/********************************************************************
+	Content Columns	(used to position content within overall columns)
+ ********************************************************************/
+.cont_col_2, .cont_col_3 {
+	float: right;
+	margin:0;
+	padding: 0 0 10px 20px;
+}
+.noright {
+	padding-right:0;
+}
+.column_9 .cont_col_2 {
+	width:466px;
+}
+.column_9 .cont_col_3 {
+	width:304px;
+}
+.column_7 .cont_col_2 {
+	width:358px;
+}
+.column_7 .cont_col_3 {
+	width:232px;
+}
+.column_6 .cont_col_2 {
+	width:294px;
+}
+.column_6 .cont_col_3 {
+	width:189px;
+}
+.column_5 .cont_col_2 {
+	width:250px;
+}
+.column_5 .cont_col_3 {
+	width:160px;
+}
+.column_4 .cont_col_2 {
+	width:196px;
+}
+.column_4 .cont_col_3 {
+	width:124px;
+}
+
+/*********************************************************
+	Second-Level Images
+ *********************************************************/
+.img_main {
+	margin:0 0 15px 0;
+}
+.img_left {
+	float:left;
+	margin:3px 15px 10px 0px;
+}
+.img_right {
+	float:right;
+	margin:3px 0px 10px 15px;
+}
+
+/*********************************************************
+	Links Boxes
+ *********************************************************/
+.linksbox {
+	background-color:#eee;
+	border:1px solid #ccc;
+	margin:0 0 20px 0;
+	padding:0;
+	display: inline-block;
+}
+.linksbox h1, .linksbox h1.gray, linksbox h1.darkgray {
+	font-size:1.4em;
+	color:#fff;
+	margin:0;
+	padding: 8px 5px 8px 12px;
+	/*background: #F0F0F0 url('leftbox_top.gif') no-repeat;
+	color: #808080;
+	height: 40px;
+	width: 159px;*/
+}
+.linksbox h1 {
+	background-color:#900;
+}
+.linksbox h1.gray {
+	background-color:#777;
+}
+.linksbox h1.darkgray {
+	background-color:#333;
+}
+.linksbox h1.large {
+	font-size:2.2em;
+}
+.linksbox ul {
+	font: 1.3em/140% Verdana,sans-serif;
+	padding:5px 12px 0px 25px;
+}
+.linksbox ul li {
+	padding-bottom:3px;
+}
+.linksbox ul.nobullets {
+	list-style-type:none;
+	padding:5px 5px 0px 12px;
+}
+.linksbox p {
+	font: 9.5pt Verdana,sans-serif;
+	padding:4px 10px 0 10px;
+}
+.linksboxright {
+	float:right;
+	width:250px;
+	margin:0 0 0 10px;
+}
+
+
+/*********************************************************
+    Horizontal List
+ *********************************************************/
+.hori-list {
+	margin-bottom:30px;
+	margin-top:20px;
+}
+.hori-list h1{
+	text-align:center;
+}
+.hori-list ul{
+	padding:10px 0;
+	margin-bottom:0px;
+	text-align:center;
+}
+.hori-list ul li{
+    display:inline;
+    font-size:1.4em;
+	font-weight:bold;
+	padding:4px;
+}
+
+/*********************************************************
+    Form Styles
+ *********************************************************/
+#content form{
+	width:70%;
+	font-size:1.2em;
+}
+#content fieldset{
+	border:#333333 double 3px;
+	background-color:#eeeeee;
+	margin:10px 0;
+	padding:10px 5px;
+	clear:both;
+}
+#content legend{
+	font-size:1.4em;
+	font-weight:bold;
+	color:#990000;
+	margin-left:5px;
+}
+#content label{
+	display:block;
+	margin:2px 0 2px 10px;
+	color:#000;
+}
+#content label span{
+	color:#BC1212;
+	vertical-align:middle;
+}
+#content input, #content select, #content textarea{
+	margin:0 0 10px 10px;
+	padding:3px;
+}
+#content textarea{
+	width:75%;
+	height:85px;
+}
+#content input.submit{
+	display:block;
+	margin:5px 0 5px 10px;
+	padding:0;
+	width:75px;
+	height:30px;
+	border:0;
+	cursor:pointer;
+}
+#content input.submit:hover{
+	color:#990000;
+	border:#000 solid 1px;
+}
+#content form p{
+	font-size:1.3em;
+	padding:5px 5px 10px 5px;
+}
+
+/*********************************************************
+	Footer
+ *********************************************************/
+#footer{
+	background:#990000 url(http://cs.ua.edu/images/footer-bg.png) top left repeat-x;
+	margin-top:40px;
+	padding:20px 0 30px 0;
+	border-top:2px #999 solid;
+	float:left;
+	width:100%;
+	min-width:972px;
+	color:#fff;
+}
+#footer h1{
+	font-size:1.8em;
+}
+#footer ul{
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
+	width:90%;
+}
+#footer li a{
+	border-top:1px dashed #fff;
+	display:block;
+	padding:5px 0 5px 3px;
+	width:100%;
+	text-decoration:none;
+}
+#footer li a:hover{
+	background-color:#4b0505;
+}
+#footer a{
+	color:#ffffff;
+	text-decoration:none;
+}
+#footer a:hover{
+	text-decoration:underline;
+}
+p#links, p#copyright{
+	font-size:1.2em;
+	font-family:"Lucida Sans", Verdana, sans-serif;
+	color:#ffffff;
+	margin:10px 0 0 0;	
+	text-align:right;
+}
+p#copyright{
+	font-size:1.1em;
+	padding:0;
+}
+
+/********************OTHER****************/
+#pscroller1{
+height: 150px;
+padding: 5px;
+}
+
+#colloquium td {
+	border-bottom: 1px solid #ccc;
+}
+
+/*SLIDER*/
+
+#slider{}	
+#slider ul, #slider li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#slider li{ 
+	width:952px;
+	height:300px;
+	overflow:hidden; 
+	}	
+#prevBtn, #nextBtn{ 
+	display:block;
+	width:30px;
+	height:77px;
+	position:absolute;
+	left:-30px;
+	top:71px;
+	}	
+#nextBtn{ 
+	left:696px;
+	display:none;
+	}														
+#prevBtn a, #nextBtn a{  
+	display:block;
+	width:30px;
+	height:77px;
+	background:url(http://cs.ua.edu/images/btn_prev.gif) no-repeat 0 0;
+	display:none;	
+	}	
+#nextBtn a{ 
+	background:url(http://cs.ua.edu/images/btn_next.gif) no-repeat 0 0;
+	display:none;	
+	}
+
+
+/*********************************************************
+    Publication Links
+ *********************************************************/
+a.urlLink {
+   background:url("http://cs.ua.edu/~syriani/images/url.png") center right no-repeat;
+   padding-right:15px;
+}
+a.htmlLink {
+   background:url("http://cs.ua.edu/~syriani/images/html.png") center right no-repeat;
+   padding-right:15px;
+}
+a.pdfLink {
+   background:url("http://cs.ua.edu/~syriani/images/pdf.png") center right no-repeat;
+   padding-right:15px;
+}
+a.pptLink {
+   background:url("http://cs.ua.edu/~syriani/images/ppt.png") center right no-repeat;
+   padding-right:15px;
+}
+span.award {
+   background:url("http://cs.ua.edu/~syriani/images/award.png") center right no-repeat;
+   padding-right:2px;
+}
+a.doiLink {
+   background:url("http://cs.ua.edu/~syriani/images/doi.png") center right no-repeat;
+   padding-right:18px;
+}
+a.elsevierLink {
+   background:url("http://cs.ua.edu/~syriani/images/elsevier.png") center right no-repeat;
+   padding-right:21px;
+   text-decoration:none;
+   color:#900;
+}
+a.ieeeLink {
+   background:url("http://cs.ua.edu/~syriani/images/ieee.png") center right no-repeat;
+   padding-right:21px;
+   text-decoration:none;
+   color:#900;
+}
+a.ieeecsLink {
+   background:url("http://cs.ua.edu/~syriani/images/ieee-cs.jpeg") center right no-repeat;
+   padding-right:21px;
+   text-decoration:none;
+   color:#900;
+}
+a.acmLink {
+   background:url("http://cs.ua.edu/~syriani/images/acm.png") center right no-repeat;
+   padding-right:19px;
+   text-decoration:none;
+   color:#900;
+}
